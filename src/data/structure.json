@@ -1,0 +1,217 @@
+{
+    "Root": {
+        "question": "Für welchen Bereich interessierst du dich?",
+        "answers": {
+            "Kunst & Kultur": [
+                "Art"
+            ],
+            "Soziales & Politik": [
+                "Social"
+            ],
+            "Religion": [
+                "KHG",
+                "ESG",
+                "Muslimische",
+                "SMD",
+                "GBS"
+            ],
+            "Umwelt & Nachhaltigkeit": [
+                "CampusGemüse",
+                "Grüne",
+                "GreenOffice",
+                "Students4Future",
+                "Vegane"
+            ]
+        }
+    },
+    "Art": {
+        "question": "Welche Sparte ziehst du vor?",
+        "answers": {
+            "Musik": [
+                "BigBand",
+                "WindSymphonica",
+                "dAcchord",
+                "UniChor",
+                "UniOrchester"
+            ],
+            "Theater": [
+                "UTK",
+                "Irrlichter",
+                "Theaterlabor"
+            ],
+            "Literatur / Journalismus": [
+                "BuchKlub",
+                "Zwischenmiete",
+                "Uniradio",
+                "Campuls",
+                "9B"
+            ],
+            "etwas anderes": [
+                "AIGUK",
+                "Anime",
+                "Lila",
+                "Osteuropa",
+                "Gaming",
+                "Lumiere",
+                "SWFanclub"
+            ]
+        }
+    },
+    "Social": {
+        "question": "Möchtest du dich innerhalb der Uni für studentische Themen einsetzen, z.B. bessere Lehre, Mensa, Campusgestaltung, ...?",
+        "answers": {
+            "Ja, Studi-Themen!": [
+                "Gremien"
+            ],
+            "Nein, lieber andere": [
+                "SocialOther"
+            ]
+        }
+    },
+    "Gremien": {
+        "question": "Möchtest du dich in der Selbstverwaltung der Uni oder der Studierenden engagieren?",
+        "answers": {
+            "studentische Selbstverwaltung": [
+                "GremienStud"
+            ],
+            "universitäre Selbstverwaltung": [
+                "GremienUni"
+            ]
+        }
+    },
+    "GremienStud": {
+        "question": "In deinem Fach oder allgemein?",
+        "answers": {
+            "Fach": [
+                "FSLehramt",
+                "FSBiologie",
+                "FSChemie",
+                "FSFinanzmathematik",
+                "FSInformatik",
+                "FSMathematik",
+                "FSPhysik",
+                "FSPsychologie",
+                "FSGeschichte",
+                "FSLitLing",
+                "FSPhilosophie",
+                "FSSoziologie",
+                "FSSport",
+                "FSJura",
+                "FSPolVer",
+                "FSWiWi"
+            ],
+            "allgemein": [
+                "GremienStudGeneral"
+            ]
+        }
+    },
+    "SocialOther": {
+        "question": "Für welches Thema brennst du?",
+        "answers": {
+            "Soziales": [
+                "SocialGeneral"
+            ],
+            "Internationales & Politik": [
+                "Amnesty",
+                "ASPolitik",
+                "DGB",
+                "ESN",
+                "IAESTE",
+                "IJM",
+                "JEF",
+                "Mondial",
+                "Osteuropa",
+                "StudierenOhneGrenzen",
+                "Ukraina",
+                "UNA"
+            ],
+            "Jura": [
+                "ELSA",
+                "BodenseeConsulting",
+                "Jutopien",
+                "LawLake",
+                "PhiDeltaPhi",
+                "RLC"
+            ],
+            "Wissenschaft/Wirtschaft": [
+                "CorrelAid",
+                "InvestmentGroup",
+                "JCF",
+                "jDPG",
+                "GBS"
+            ],
+            "Sport": [
+                "ActiveCampus",
+                "Hochschulrudern",
+                "BodenseeRacing"
+            ]
+        }
+    },
+    "GremienUni": {
+        "question": "Lieber ein spezielles Thema oder alle?",
+        "answers": {
+            "Spezielles Thema": [
+                "ALW",
+                "AFF",
+                "AKI",
+                "Gleichstellung",
+                "VGMSGM"
+            ],
+            "Alles": [
+                "Senat"
+            ]
+        }
+    },
+    "GremienStudGeneral": {
+        "question": "Lieber in einer \"Partei\" oder ohne?",
+        "answers": {
+            "Partei!": [
+                "Grüne",
+                "Jusos",
+                "Liberale",
+                "LGL",
+                "RCD",
+                "Walpartei"
+            ],
+            "Ohne": [
+                "StuVe",
+                "StuPa",
+                "FSK",
+                "Seezeit",
+                "Referate",
+                "GreenOffice"
+            ]
+        }
+    },
+    "SocialGeneral": {
+        "question": "Welches Thema liegt dir am Herzen?",
+        "answers": {
+            "Bildung": [
+                "Arbeiterkind",
+                "Botschafter",
+                "Sprungbrett",
+                "Tintenklecks"
+            ],
+            "Helfen & Begegnen": [
+                "Adtendo",
+                "RLC",
+                "SAN",
+                "LEO",
+                "Rotoract",
+                "Knastkontakte",
+                "Mondial"
+            ],
+            "Mental Health": [
+                "Adtendo",
+                "Nachtlicht",
+                "Nightline",
+                "Quak",
+                "UnitedSelbsthilfe"
+            ],
+            "LGBTQIA+": [
+                "Quak",
+                "Uniqueer"
+            ]
+        }
+    }
+}

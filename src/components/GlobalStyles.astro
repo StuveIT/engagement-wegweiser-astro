@@ -1,0 +1,170 @@
+<style is:global>
+    @font-face {
+        font-family: "Ubuntu";
+        src: url("/fonts/Ubuntu/Ubuntu-Regular.ttf");
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: "Ubuntu";
+        src: url("/fonts/Ubuntu/Ubuntu-Bold.ttf");
+        font-weight: bold;
+    }
+
+    @font-face {
+        font-family: "Ubuntu";
+        src: url("/fonts/Ubuntu/Ubuntu-Italic.ttf");
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: "Ubuntu";
+        src: local("Ubuntu"), url("/fonts/Ubuntu/Ubuntu-BoldItalic.ttf");
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    :root {
+        --text: #05151a;
+        --background: #ffffff;
+        --primary: #59c7eb;
+        --secondary: #a6e1f4;
+        --accent: #00a9e0;
+
+        --line-color: #e1e2e5;
+
+        --standard-box-shadow: 0 0 182px 0px rgba(0, 0, 0, 0.2);
+
+        --normal-weight: 300;
+        --bold-weight: 600;
+
+        --border-radius: 5px;
+
+        --seperator: 1px solid var(--line-color);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+        text-overflow: ellipsis;
+        text-wrap: wrap;
+    }
+
+    p,
+    a,
+    button,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    span {
+        color: var(--text);
+    }
+
+    p ~ h1,
+    p ~ h2 {
+        margin-top: 3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    p ~ h3,
+    p ~ h4 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p ~ h5,
+    p ~ h6 {
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    h1 ~ p,
+    h2 ~ p {
+        margin-top: 0.8rem;
+    }
+
+    h3 ~ p,
+    h4 ~ p {
+        margin-top: 0.5rem;
+    }
+
+    h5 ~ p,
+    h6 ~ p {
+        margin-top: 0.2rem;
+    }
+
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    p,
+    li,
+    a {
+        line-height: 1.5;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    i {
+        font-size: 2rem;
+        color: var(--text);
+        margin: 0 0.5rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    a,
+    button {
+        font-weight: var(--bold-weight);
+        border: none;
+        border-bottom: 2px solid var(--accent);
+    }
+
+    a:hover,
+    button:hover {
+        background-color: var(--primary);
+    }
+
+    button,
+    a,
+    p {
+        margin-bottom: 1rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        margin: 2rem 1rem;
+    }
+
+    form * {
+        width: 100%;
+    }
+
+    form input[type="submit"] {
+        margin-top: 1rem;
+    }
+</style>

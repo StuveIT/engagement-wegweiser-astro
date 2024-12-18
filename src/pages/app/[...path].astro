@@ -1,0 +1,83 @@
+---
+import type { GetStaticPaths } from "astro";
+import Card from "../../components/Card.astro";
+import PathNavigation from "../../components/PathNavigation.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Page from "../../models/Page";
+import PageRef from "../../models/references/PageRef";
+
+const structure = await getCollection("structure");
+
+export const getStaticPaths = (async () => {
+    const structure = await getCollection("structure");
+    console.log(structure);
+    
+    // generate all possible paths assuming structure is a tree
+    const paths = [];
+    const generatePaths = async (pageRef: PageRef, path: string) : Promise<string[]> => {
+        paths.push(path);
+        
+        const page = await pageRef.dereference();
+		if (page) {
+			// generate paths recursively
+			if (page.answers instanceof PageRef)
+				return generatePaths(page.answers, `${path}/${page.id}`);
+			else if (page.answers instanceof Array) {
+				
+		}
+    };
+    
+    return [];
+}) satisfies GetStaticPaths;
+
+// const currPath: string = Astro.props.path || "Root";
+// const currNodeRef: string = currPath.split("/").filter((node) => node != "")[-1];
+---
+
+<Layout>
+	<Card>
+        <!-- <PathNavigation path={currPath} structure={structure} />  -->
+
+	</Card>
+</Layout>
+
+<style>
+	#options {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		gap: 2rem;
+
+		padding: 0 2em;
+	}
+
+	#options > * {
+		flex: 1;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		background-color: var(--primary);
+		border: none;
+		border-radius: var(--border-radius);
+
+		text-align: center;
+
+		margin: 1rem 0;
+
+		font-size: 1.5rem;
+		text-transform: capitalize;
+
+		padding: 1rem;
+		margin: 0;
+	}
+
+	#options > *:hover {
+		background-color: var(--accent);
+		cursor: pointer;
+	}
+</style>
