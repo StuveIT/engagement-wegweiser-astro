@@ -70,13 +70,14 @@ h3 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 1rem;
 
     padding: 0 2em;
 }
 
 #options>* {
     flex: 1;
+    min-width: 90px;
 
     display: flex;
     flex-direction: column;
@@ -89,12 +90,12 @@ h3 {
 
     text-align: center;
 
-    margin: 1rem 0;
+    margin: .4rem 0;
 
     font-size: 1.2rem;
     text-transform: capitalize;
 
-    padding: 1rem;
+    padding: .8rem;
     margin: 0;
 }
 
