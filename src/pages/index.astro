@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import LinkBlock from '../components/LinkBlock.astro';
+import ClientRouter from 'astro/components/ClientRouter.astro';
 ---
 
 <Layout>
@@ -23,3 +24,5 @@ import LinkBlock from '../components/LinkBlock.astro';
     </LinkBlock>
   </Card>
 </Layout>
+
+<ClientRouter

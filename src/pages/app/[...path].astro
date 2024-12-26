@@ -1,48 +1,69 @@
 ---
 import type { GetStaticPaths } from "astro";
-import Card from "../../components/Card.astro";
-import PathNavigation from "../../components/PathNavigation.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import Page from "../../models/Page";
-import PageRef from "../../models/references/PageRef";
+import Card from "../../components/Card.astro";
 
-const structure = await getCollection("structure");
-
+// Define valid paths for this page, so they can be pre-rendered at build time
 export const getStaticPaths = (async () => {
-    const structure = await getCollection("structure");
-    console.log(structure);
-    
-    // generate all possible paths assuming structure is a tree
-    const paths = [];
-    const generatePaths = async (pageRef: PageRef, path: string) : Promise<string[]> => {
-        paths.push(path);
-        
-        const page = await pageRef.dereference();
-		if (page) {
-			// generate paths recursively
-			if (page.answers instanceof PageRef)
-				return generatePaths(page.answers, `${path}/${page.id}`);
-			else if (page.answers instanceof Array) {
-				
+	const questionaire = await getCollection("questionaire");
+
+	const validPaths = questionaire.map((question, index) => {
+		return {
+			params: {
+				// valid pages are question-0, question-1, etc.
+				path: "question-" + index,
+			},
+			props: {
+				id: question.id,
+				answers: question.data,
+				index: index
+			}
+		};
+	});
+
+	// add the empty path to the valid paths (use the first question as the default)
+	validPaths.push({
+		params: { path: "" },
+		props: {
+			id: questionaire[0].id,
+			answers: questionaire[0].data,
+			index: 0
 		}
-    };
-    
-    return [];
+	});
+
+	return validPaths;
 }) satisfies GetStaticPaths;
 
-// const currPath: string = Astro.props.path || "Root";
-// const currNodeRef: string = currPath.split("/").filter((node) => node != "")[-1];
+const { id, answers, index } = Astro.props;
+
+// reformat the answers to be an array of objects
+const options = Object.entries(answers).map(([key, value]) => {
+	return {
+		key,
+		value
+	};
+});
 ---
 
 <Layout>
 	<Card>
-        <!-- <PathNavigation path={currPath} structure={structure} />  -->
-
+		<h3>{id}</h3>
+		<div id="options">
+			{options.map((answer: { key: string, value: number[] }) => (
+				<a class="link-block option" href={"/app/question-" + (index + 1)}>
+					{answer.key}
+				</a>
+			))}
+		</div>
 	</Card>
 </Layout>
 
 <style>
+	h3 {
+		margin-top: 0;
+	}
+
 	#options {
 		display: flex;
 		flex-direction: row;
@@ -69,7 +90,7 @@ export const getStaticPaths = (async () => {
 
 		margin: 1rem 0;
 
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		text-transform: capitalize;
 
 		padding: 1rem;
