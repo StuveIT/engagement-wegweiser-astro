@@ -1,15 +1,24 @@
 {
     "First question": {
-        "Yes": [0, 0, 1, 2],
-        "No": [1, 0, 1, 1]
+        "description": "Do you know what a JSON file is?",
+        "answers": {
+            "Yes": [0, 0, 1, 2],
+            "No": [1, 0, 1, 1]
+        }
     },
     "Second question": {
-        "Maybe": [3, 0, 1, 2],
-        "Definitely": [0, 0, 1, 0]
+        "description": "Do you know what a CSV file is?",
+        "answers": {
+            "Yes": [0, 0, 1, 2],
+            "No": [1, 0, 1, 1],
+            "I don't know": [0, 1, 1, 1]
+        }
     },
     "Third question": {
-        "I am not aware of that": [0, 1, 0, 2],
-        "I might have come across that": [1, 0, 3, 0],
-        "I'd have to look that up": [0, 0, 1, 1]
+        "description": "Do you know what a ODT file is?",
+        "answers": {
+            "Definitely": [0, 0, 1, 2],
+            "Don't think so": [1, 0, 1, 1]
+        }
     }
 }

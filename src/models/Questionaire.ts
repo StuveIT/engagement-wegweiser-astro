@@ -17,14 +17,22 @@ export type Answer = {
 export type Question = {
     id: string;
     answers: Answer[];
+    description: string;
     index: number;
 };
+
+export enum QuestionaireState {
+    QUESTIONS,
+    WEIGHTING,
+    RESULT
+}
 
 export const convertToQuestions = (collection: CollectionQuestionaire): Question[] => {
     return collection.map((question, index) => {
         return {
             id: question.id,
-            answers: Object.entries(question.data).map(([key, value]) => {
+            description: question.data.description,
+            answers: Object.entries(question.data.answers).map(([key, value]) => {
                 return {
                     text: key,
                     score: value

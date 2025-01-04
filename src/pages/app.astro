@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Card from "../components/Card.astro";
 import Questionaire from "../components/Questionaire.vue";
+import QuestionaireNavigation from "../components/QuestionaireNavigation.vue";
 
 const questionaire: CollectionQuestionaire = await getCollection("questionaire");
 const formattedQuestionaire: Question[] = convertToQuestions(questionaire);
@@ -14,4 +15,5 @@ const formattedQuestionaire: Question[] = convertToQuestions(questionaire);
 	<Card>
 		<Questionaire questionaire={formattedQuestionaire} client:load />
 	</Card>
+	<QuestionaireNavigation questionaire={formattedQuestionaire} index={0} client:load />
 </Layout>

@@ -5,10 +5,10 @@ import { parse as parseCSV } from "csv-parse/sync";
 const questionaire = defineCollection({
     loader: file("src/data/questionaire.json"),
     schema:
-        z.record(  // Form Answers
-            z.string(), // Answer String
-            z.array(z.number()) // Answer Value
-        )
+        z.object({
+            description: z.string(),
+            answers: z.record(z.array(z.number())),
+        }),
 });
 
 const hsg = defineCollection({
