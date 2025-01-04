@@ -1,48 +1,32 @@
-# Astro Starter Kit: Basics
+# Engagement Wegweiser
+![Engagement Wegweiser Screenshot](doc/Engagement%20Wegweiser.png)
+Der Engagement Wegweiser der Studierenden Vertretung der Universität Konstanz hat zum Ziel, den Studierenden verschiedene Hochschulgruppen und hochschulpolitische Institutionen zu empfehlen, in denen sie sich mit anderen Studierenden über ihre Interessen austauschen können bzw. sich für diese Interessen einsetzen können.
 
-```sh
-npm create astro@latest -- --template basics
-```
+Der neue Engagement Wegweisers funktioniert jetzt mit [Astro](https://astro.build). Im Herzen wird die Applikationslogik, also das was man eigentlich als den Engagement Wegweiser wahrnimmt, über [Vue](https://vuejs.org)-Komponenten umgesetzt.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Funktionsweise
+Wird die `/app`-Route besucht, befindet man sich unmittelbar in der eigentlichen Applikation. Man startet im Fragebogen:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Fragebogen
+Im Fragebogen wird ein vordefinierter Fragenkatalog mit verschiedenen Antwortmöglichkeiten ausgefüllt. Mit jeder Antwortmöglichkeit ist eine Wertung verbunden. Diese Wertung teilt sich in eine vordefinierte Anzahl von Kategoriewertungen auf.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+### Gewichtung
+Auf der Gewichtungsseite lassen sich die Fragen, die für den Nutzer am wichtigsten erscheinen, für eine doppelte Wertung markieren. Gleichzeitig dient die Gewichtungsseite als Übersicht der abgegebenen Antworten.
 
-## 🚀 Project Structure
+### Resultat
+Auf der Ergebnisseite werden die Wertungen der abgegebenen Antworten zu einer Gesamtwertung aufaddiert. Diese Gesamtwertung wird dann mit dem Katalog der Gremien, Hochschulgruppen und deren Posten abgeglichen, damit eine nach Übereinstimmung geordnete Liste angezeigt werden kann.
 
-Inside of your Astro project, you'll see the following folders and files:
+Durch Klicken lassen sich mehr Informationen über die gelisteten Engagementmöglichkeiten einsehen.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Astro: 🧞 Befehle
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Alle Befehle werden vom Projektordner aus in einem Terminal ausgeführt:
 
-## 🧞 Commands
+| Befehl                    | Aktion                                             |
+| :------------------------ | :------------------------------------------------- |
+| `npm install`             | Installiert alle nötigen Pakete                    |
+| `npm run dev`             | Startet einen lokalen Test-server `localhost:4321` |
+| `npm run build`           | Baut die Website für Production `./dist/`          |
+| `npm run preview`         | Vorschau der gebauten Website vor dem Deployment   |
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Bei weiteren Fragen zu Astro, konsultiere die [Dokumentation](https://docs.astro.build) oder den [Discord server](https://astro.build/chat).
