@@ -4,19 +4,25 @@ Der Engagement Wegweiser der Studierenden Vertretung der Universität Konstanz h
 
 Der neue Engagement Wegweisers funktioniert jetzt mit [Astro](https://astro.build). Im Herzen wird die Applikationslogik, also das was man eigentlich als den Engagement Wegweiser wahrnimmt, über [Vue](https://vuejs.org)-Komponenten umgesetzt.
 
-## Funktionsweise
+## Applikation
+Die Hauptapplikation ist das, was man als Nutzer des Engagement Wegweisers sieht.
+
+### Funktionsweise
 Wird die `/app`-Route besucht, befindet man sich unmittelbar in der eigentlichen Applikation. Man startet im Fragebogen:
 
-### Fragebogen
+#### Fragebogen
 Im Fragebogen wird ein vordefinierter Fragenkatalog mit verschiedenen Antwortmöglichkeiten ausgefüllt. Mit jeder Antwortmöglichkeit ist eine Wertung verbunden. Diese Wertung teilt sich in eine vordefinierte Anzahl von Kategoriewertungen auf.
 
-### Gewichtung
+#### Gewichtung
 Auf der Gewichtungsseite lassen sich die Fragen, die für den Nutzer am wichtigsten erscheinen, für eine doppelte Wertung markieren. Gleichzeitig dient die Gewichtungsseite als Übersicht der abgegebenen Antworten.
 
-### Resultat
+#### Resultat
 Auf der Ergebnisseite werden die Wertungen der abgegebenen Antworten zu einer Gesamtwertung aufaddiert. Diese Gesamtwertung wird dann mit dem Katalog der Gremien, Hochschulgruppen und deren Posten abgeglichen, damit eine nach Übereinstimmung geordnete Liste angezeigt werden kann.
 
 Durch Klicken lassen sich mehr Informationen über die gelisteten Engagementmöglichkeiten einsehen.
+
+## Editor
+Für eine interaktive Konfiguration des Engagement Wegweiser existiert ein Editor.
 
 ## Astro: 🧞 Befehle
 

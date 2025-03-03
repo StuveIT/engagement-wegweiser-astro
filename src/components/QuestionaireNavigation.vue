@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Question } from '../models/Questionaire';
+import type { Question } from '../../models/Questionaire';
 
 const props = defineProps<{
     questionaire: Question[];

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { QuestionaireState, type Question } from "../models/Questionaire";
+import { QuestionaireState, type Question } from "../../models/Questionaire";
 import { ref } from "vue";
 
 // Define props that shall be passed to the component
@@ -96,6 +96,9 @@ function computeScore() {
             score[i] += questionScore;
         });
     }
+
+    // take the dot product of the user score and hsg score
+    for(const hsg of )
 
     return score;
 }
